@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  app:
+    # image: ubuntu:18.04
+    # build: ./build
+    image: buzzingpixel/docker-ubuntu-tools:latest
+    container_name: docker-ubuntu-tools
+    volumes:
+      - ${DOCKER_RSA_FILE}:/tmp/.ssh/id_rsa:delegated
+      - ${DOCKER_RSA_PUB_FILE}:/tmp/.ssh/id_rsa.pub:delegated
+      - ${DOCKER_SSH_CONFIG_DIR}:/root/.ssh/sshconfig:delegated
+      - ${DOCKER_HOST_MOUNT}:/mnt/host:delegated
+      - ${DOCKER_HOST_MOUNT_2}:/mnt/host2:delegated
+      - ${DOCKER_HOST_MOUNT_3}:/mnt/host3:delegated
+      - ${DOCKER_HOST_MOUNT_4}:/mnt/host4:delegated
+      - ${DOCKER_HOST_MOUNT_5}:/mnt/host5:delegated
+      - ${DOCKER_HOST_MOUNT_6}:/mnt/host6:delegated
+      - ./dev/null/known_hosts:/root/.ssh/known_hosts:delegated
+      - ./dev/null/.bash_history:/root/.bash_history:delegated

@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+touch dev/null/.bash_history
+touch dev/null/known_hosts
+docker-compose up -d
+docker exec -it --user root docker-ubuntu-tools bash
