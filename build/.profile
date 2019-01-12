@@ -88,7 +88,7 @@ function parse_git_branch () {
 }
 
 # PS1="$Cyan$PathShort$Green\$(parse_git_branch)${NewLine}➜ $Color_Off ";
-PS1="${BGreen}\u@docker-ubuntu-tools: ${Cyan}\`pwd\`${Blue}$(parse_git_branch)${NewLine}${Green}➜ ${Color_Off} ";
+PS1="${BGreen}\u@docker-ubuntu-tools: ${Cyan}\`pwd\`${Blue}$(parse_git_branch)${NewLine}${Green} -> ${Color_Off} ";
 
 
 

@@ -8,6 +8,7 @@ RUN apt-get update && apt-get install -y \
     nano \
     vim \
     git \
+    rsync \
     && rm -rf /var/lib/apt/lists/*
 COPY .profile /root/.profile
 COPY .profile /root/.bashrc
