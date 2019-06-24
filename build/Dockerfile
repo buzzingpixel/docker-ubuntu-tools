@@ -5,11 +5,14 @@ RUN apt-get update && apt-get install -y \
     zip \
     jq \
     curl \
+    locales \
     nano \
     vim \
     git \
+    mosh \
     rsync \
-    && rm -rf /var/lib/apt/lists/*
+    && rm -rf /var/lib/apt/dlists/*
+RUN locale-gen en_US.UTF-8
 COPY .profile /root/.profile
 COPY .profile /root/.bashrc
 RUN mkdir -p /root/.ssh/sshconfig
